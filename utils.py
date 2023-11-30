@@ -1,6 +1,7 @@
 
 from matplotlib import pyplot as plt
 import numpy as np
+import math
 
 def show_images(images,titles=None):
     #This function is used to show image(s) with titles by sending an array of images and an array of associated titles.
@@ -19,3 +20,7 @@ def show_images(images,titles=None):
         n += 1
     fig.set_size_inches(np.array(fig.get_size_inches()) * n_ims)
     plt.show()
+
+
+def calculate_distance(x1, y1, x2, y2):
+    return math.sqrt((x2 - x1)**2 + (y2 - y1)**2)
